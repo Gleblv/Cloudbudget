@@ -58,6 +58,22 @@ body {
     padding: 0 15px;
 }
 
+._ibg {
+    position: relative;
+
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------- */
+
 .main {
     flex: 1 1 auto;
 }
@@ -65,8 +81,12 @@ body {
 /* ---HEADER-------------------------------- */
 
 .header {
-    background: #ED4C5C;
     color: #fff;
+    position: absolute;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 .header__container {
     min-height: 140px;
@@ -77,6 +97,7 @@ body {
 .header__logo {
     display: flex;
     align-items: center;
+    margin: 0px 15px 0px 0px;
 }
 .header__logo > *:not(:last-child) {
     margin: 0px 7px 0px 0px;
@@ -98,6 +119,7 @@ body {
 .links-header {
     display: flex;
     margin: 0 -7.5px;
+    flex-wrap: wrap;
 }
 .links-header__item {
     padding: 0 7.5px;
@@ -107,6 +129,7 @@ body {
     cursor: pointer;
 }
 .header__settings {
+    margin: 0px 0px 0px 15px;
     display: flex;
 }
 .header__settings > *:not(:last-child) {
@@ -146,4 +169,125 @@ body {
     border: 1px solid #FFFFFF;
     border-radius: 6px;
     padding: 11px 30px;
+}
+
+@media (max-width: 550px) {
+    .header__container {
+        flex-wrap: wrap;
+    }
+    .header__logo {
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+        margin: 0;
+    }
+    .header__links {
+        flex-wrap: wrap;
+        flex: 0 1 100%;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .header__links:not(:last-child) {
+        margin: 0px 0px 5px 0px;
+    }
+    .header__settings {
+        width: 100%;
+        margin: 0px 0px 5px 0;
+        justify-content: space-between;
+    }
+    .header__login {
+        padding: 5.5px 20px;
+    }
+}
+
+/* ---CLOUDBUDGET-MAIN------------------------------ */
+
+.cloudbudget-main {
+    position: relative;
+}   
+.cloudbudget-main__container {
+    padding: 257px 0px 187px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.cloudbudget-main__container > *:not(:last-child) { 
+    margin: 0px 0px 39px 0px;
+    color: #fff;
+}
+
+.cloudbudget-main__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: calc(86 / 72 * 100%);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.cloudbudget-main__text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    max-width: 540px;
+    padding: 0 15px;
+}
+.cloudbudget-main__signup {
+    background: #fff;
+    border-radius: 6px;
+    padding: 17px 53px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(17 / 14 * 100%);
+    text-transform: uppercase;
+    color: #ED4C5C;
+}
+
+.cloudbudget-main__filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+    z-index: 1;
+}
+.cloudbudget-main__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 768.98px) {
+    .cloudbudget-main__container {
+        padding: 180px 0px 130px 0px;
+    }
+    .cloudbudget-main__container > *:not(:last-child) { 
+        margin: 0px 0px 20px 0px;
+        color: #fff;
+    }
+    .cloudbudget-main__title {
+        font-size: 55px;
+    }
+    .cloudbudget-main__text {
+        font-size: 18px;
+    }
+    .cloudbudget-main__signup {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cloudbudget-main__container {
+        padding: 180px 0px 85px 0px;
+    }
+    .cloudbudget-main__title {
+        font-size: 30px;
+    }
+    .cloudbudget-main__text {
+        font-size: 14px;
+    }
 }
