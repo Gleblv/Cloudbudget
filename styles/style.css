@@ -362,3 +362,116 @@ body {
         padding: 0px 0px 60% 0px;
     }
 }
+
+/* ---FEATURES------------------------------ */
+
+.features {
+    padding: 63px 0px 124px 0px;
+}
+.features__container {
+}
+.features__title {
+    margin: 0 auto;
+    text-align: center;
+    line-height: calc(43 / 36 * 100%);
+    margin: 0px 0px 63px 0px;
+}
+.features__body {
+    display: flex;
+}
+.features-items {
+    margin: 0 -15px;
+}
+.features-item {
+    flex: 0 1 33.333%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+.features-item__background {
+    position: relative;
+    padding: 0px 0px 71.42% 0px;
+    object-fit: cover;
+}
+.features-item__background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.features-item__card {
+    position: relative;
+    z-index: 2;
+}
+.card-features {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 33px 20px 25px 20px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 293px;
+    margin: 0 auto;
+    margin-top: -93px;
+    background: #fff;
+}
+.card-features__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18 * 100%);
+    color: #101010;
+    max-width: 229px;
+    margin: 0px 0px 20px 0px;
+}
+.card-features__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #101010;
+    max-width: 229px;
+}
+.card-features__text:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+}
+.card-features__link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    color: #ED4C5C;
+}
+.card-features__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .features {
+        padding: 30px 0;
+    }
+    .features-item__background {
+        margin: 0px 0px 15px 0px;
+    }
+    .card-features {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .features__body {
+        flex-direction: column;
+    }
+    .features-item:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+    .features-item__background {
+        margin: 0;
+    }
+    .card-features {
+        margin: -80px auto 0 auto;
+        max-width: none;
+        width: 75%;
+    }
+}
