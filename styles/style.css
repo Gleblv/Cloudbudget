@@ -475,3 +475,79 @@ body {
         width: 75%;
     }
 }
+
+/* ---TECHNOLOGY------------------------------ */
+
+.technology {
+    padding: 63px 0px 104px 0px;
+}
+.technology__container {
+}
+.technology__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: calc(43 / 36 * 100%);
+    text-align: center;
+    color: #000000;
+    margin: 0px 0px 52px 0px;
+}
+.technology__row {
+    display: flex;
+    margin: 0 -15px;
+}
+.technology__column {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+}
+.column-technology {
+}
+.column-technology__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 20px 0px;
+    height: 100%;
+}
+.column-technology__number {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: calc(120 / 100 * 100%);
+    text-align: center;
+    color: rgba(16, 16, 16, 0.08);
+}
+.column-technology__icon {
+    position: absolute;
+    top: 59px;
+}
+.column-technology__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18 * 100%);
+    text-align: center;
+    color: #101010;
+}
+.column-technology__subtitle:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+.column-technology__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12 * 100%);
+    text-align: center;
+    color: #000000;
+    max-width: 191px;
+    margin: 0 auto;
+}
+
+@media (max-width: 590px) {
+    .technology__row {
+        flex-wrap: wrap;
+    }
+    .technology__column {
+        flex: 0 1 50%;
+    }
+}
